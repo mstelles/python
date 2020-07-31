@@ -5,7 +5,7 @@ def lambda_handler(event, context):
     response = client.create_pipeline(
         pipeline={
             'name': 'bahpeline',
-            'roleArn': 'arn:aws:iam::148765843611:role/service-role/AWSCodePipelineServiceRole-us-east-2-MyPipeline',
+            'roleArn': '<Role ARN>'
             'artifactStore': {
                 'type': 'S3',
                 'location': 'tellesma-codepipeline'
