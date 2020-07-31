@@ -4,11 +4,11 @@ def lambda_handler(event, context):
     client = boto3.client('codepipeline')
     response = client.create_pipeline(
         pipeline={
-            'name': 'bahpeline',
+            'name': '<pipeline name>',
             'roleArn': '<Role ARN>'
             'artifactStore': {
                 'type': 'S3',
-                'location': 'tellesma-codepipeline'
+                'location': '<bucket name>'
             },
             'stages': [
                 {
@@ -29,8 +29,8 @@ def lambda_handler(event, context):
                                 }
                             ],
                             'configuration': {
-                                'RepositoryName': 'MyRepo',
-                                'BranchName': 'master'
+                                'RepositoryName': '<repository name>',
+                                'BranchName': '<branch name>'
                             }
                         }
                     ]
